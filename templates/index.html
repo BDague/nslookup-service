@@ -1,0 +1,11 @@
+<h1> NS Lookup As a Service web Interface </h1>
+
+Enter a domain name: 
+<form action='/lookup' method="POST">
+    <input type = 'text' name ='lookUpName'><br>
+    <input type = 'submit' value="Lookup">
+</form>
+
+{% if lookup %}
+    {{ lookup }}
+{% endif %}
