@@ -35,7 +35,7 @@ pyflakes==2.0.0
 pyparsing==2.3.0
 python-dateutil==2.7.5
 PyYAML==3.13
-requests==2.18.4
+requests==2.20.1
 safety==1.8.4
 semantic-version==2.5.0
 six==1.11.0
