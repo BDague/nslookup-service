@@ -1,3 +1,18 @@
+<!DOCTYPE HTML>
+
+
+:
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+<style>
+
+body {
+    background-image : url("{{ url_for('static',filename='MotherBoardLinks.png') }}");
+}
+</style>
+</head>
+
+<body>
 <h1> NS Lookup As a Service web Interface </h1>
 
 Enter a domain name: 
@@ -9,3 +24,12 @@ Enter a domain name:
 {% if lookup %}
     {{ lookup }}
 {% endif %}
+<br>
+Previous Results: 
+<br>
+
+{% for item in looked.keys() %}
+{{ item }}: {{looked[item]}} <br>
+{% endfor %}
+
+</body>
