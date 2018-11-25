@@ -16,20 +16,22 @@ body {
 <h1> NS Lookup As a Service web Interface </h1>
 
 Enter a domain name: 
-<form action='/lookup' method="POST">
+<form action='/' method="POST">
     <input type = 'text' name ='lookUpName'><br>
     <input type = 'submit' value="Lookup">
 </form>
 
 {% if lookup %}
-    {{ lookup }}
+    {% for item in lookup.keys() %}
+    {{item}}: {{ lookup[item] }} <br>
+    {% endfor %}
 {% endif %}
 <br>
 Previous Results: 
 <br>
 
-{% for item in looked.keys() %}
-{{ item }}: {{looked[item]}} <br>
+{% for item in looked  %}
+    {{ item['name'] }} <br>
 {% endfor %}
 
 </body>

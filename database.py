@@ -6,11 +6,11 @@ class DatabaseInterface(object):
     def __init__(self):
         """TODO: to be defined1. """
 
-        self.table = {}
+        self.table = []
 
 
-    def add(self, key, value):
-        self.table[key] = value
+    def add(self, value):
+        self.table.append(value)
     
     def remove(self, key):
-        del self.table[key]
+        self.table.remove(value)
