@@ -21,7 +21,7 @@ def has_name_lookup():
 
     #Otherwise do a real lookup and add it to the database for later
     address = nameserverlookup(name) 
-    data.add(name, address)
+    data.add(address)
     return render_template('index.html', lookup=address, looked=data.table)
 
 @application.route('/lookup', methods=['GET'])
